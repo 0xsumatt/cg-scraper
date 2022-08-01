@@ -1,8 +1,8 @@
-extern crate csv;
+
 use serde::{Deserialize,Serialize};
 use reqwest::blocking::get;
-use csv::Writer;
-use std::{error::Error, fmt::Result};
+
+
 
 fn main() {
   let res = get("https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&page2&sparkline=false").unwrap();
